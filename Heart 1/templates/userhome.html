@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LOGIN PAGE</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div style="min-height: 120px; background-color: rgb(114, 178, 203); font-size: 25px; font-weight: bolder;" id="NAV">
+        <div class="col-md-2" style="padding-top: 20px;">
+            Heart Disease Prediction
+        </div>
+    <div class="col-md-5">
+    </div>
+   
+    <div class="col-md-5" style="padding-top: 20px;">
+        <a href="/index">Home</a> 
+        
+
+     </div>
+</div>
+
+    
+     <div class="col-md-12">
+    <h1 style="text-align: center;">PREDICTION PAGE</h1>
+<form action="/predict" method="POST" style="padding-top:30px; padding-bottom:30px;">
+        <div class="col-md-12">
+    
+        <label>Age:</label>
+        <input type="number" id="age" required name="age" placeholder="Enter age"><br><br>
+        <label>Sex:</label>
+        <input type="radio" id="sex" required name="sex"  value="1">Male 
+        <label style="margin-left:20px;">
+        <input type="radio" id="sex" required name="sex" value="0">Female
+        </label><br><br>
+        <label>Chest Pain:</label>
+        <select type="number" id="cp" required name="chestpain">
+        <option value="1">Typical Angina</option>
+        <option value="2">Atypical Angina</option>
+        <option value="3">Non-angina Pain</option>
+        <option value="4">Asymptomatic</option>
+       </select><br><br>
+
+        <label>Resting blood pressure:</label>
+        <input type="number" id="trestbps" required name="trestbps" placeholder="Resting blood pressure"><br><br>
+        <label>Cholestrol:</label>
+        <input type="number" id="chol" required name="chol" placeholder="Cholestrol"><br><br>
+        
+        <label>Fasting blood pressure:</label>
+        
+        <input type="radio" id="fbs_yes" required name="bs_yes" value="1">True
+        <label style="margin-left:20px"></label>
+         <input type="radio" id="fbs_yes" required name="bs_yes" value="1">False
+         <br><br>
+        <label>Resting electrocardiographic result:</label>
+        <select type="number" id="restecg" required name="restecg" placeholder="Resting electrocardiographic result"><br><br>
+            <option value="0">Normal</option>
+            <option value="1">Having slight wave abnormal</option>
+            <option value="2">showing probable or definite left ventricular hypertrophic</option>
+        </select><br><br>
+        <label>Maximum heart rate acheived:</label>
+        <input type="number" id="thalch" required name="thalch" placeholder="Maximum heart rate acheived"><br><br>
+        <label>Exercise induced angina:</label>
+        <input type="Radio" id="exang" required name="exang" value="1">Yes
+        <input type="Radio" id="exang" required name="exang" value="1">No
+        <br><br>
+        <label>Test depression induced by exercise relative to rest:</label>
+        <input type="number" id="oldpeak" required nmae="oldpeak" placeholder="Test depressipn induced by exercise relative to rest"><br><br>
+
+        <label>The slope of peak exercise ST segment:</label>
+        <select type="number" id="slope" required name="slope" placeholder="The slope of peak exercise ST segment"><br><br>
+        <option value="1">Upsloping</option>
+        <option value="2">Flat</option>
+        <option value="3">Downsloping</option>
+        </select><br><br>
+
+        <label>Number of major vessels(0-3) colored by fluoroscopy:</label>
+        <input type="number" id="idca" required name="idca" placeholder="Number of major vessels(0-3) colored by fluoroscopy"><br><br>
+        
+        <label>Thalassemia:</label>
+        <select type="number" id="thal" required name="thal" placeholder="Thalassemia "><br><br>
+        <option value="1">normal</option>
+        <option value="2">fixed defect</option>
+        <option value="3">Reversible defect</option>
+        </select><br><br>
+
+        <button class="btn btn-success col-md-6">Submit</button>
+         <button class="btn btn-danger col-md-6">Reset</button>
+        </form>
+  
+    
+    <div style="min-height: 100px;background-color: rgb(132, 174, 203); font-size: 25px; font-weight: bolder; text-align: center;"id="NAV">
+        All Rights Reserved 2025 Heart">
+    </div>
+     
+    
+            
+</body>
+</html>

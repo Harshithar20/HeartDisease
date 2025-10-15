@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration page</title>
+        <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div style="min-height: 120px; background-color: rgb(114, 178, 203); font-size: 25px; font-weight: bolder;" id="NAV">
+        <div class="col-md-2" style="padding-top: 20px;">
+            Heart Disease Prediction
+        </div>
+    <div class="col-md-5">
+    
+    </div>
+    <div class="col-md-5" style="padding-top: 20px;">
+        <a href="/index">Home</a> |
+        <a href="/registration">Register</a> |
+        <a href="/login">Login</a> |
+    </div>
+    </div>
+    
+    <div style="min-height: 800px;">
+        <div class="col-md-6" id="PA">
+           <img src="{{url_for('static',filename='003.jpg')}}"class="col-md-12"> 
+           
+        </div>
+         <h1 style="text-align: center;">Register</h1>
+        <div class="col-md-6">
+            <form  action="/user_register" method="POST" style="padding-top:30px">
+                <p><b>Name:</b></p>
+            <input class="form-control" type="text" id="name" name="name" placeholder="Enter name" onchange="validname();">
+            <p><b>Age:</b></p>
+            <input class="form-control" type="text" id="age" name="age" placeholder="Enter age" onchange="validage();">
+            
+            <p><b>Gender:</b></p>
+            <label></label>
+                <input type="radio" name="gender" value="Male">Male
+            </label>
+            <label style="margin-left: 20px;">
+                <input type="radio" name="gender" value="Female">Female
+            </label>
+                <p><b>Contact number:</b></p>
+                <input class="form-control" type="text" id="contactnumber" name="contact" placeholder="Enter contact number" onchange="validcontactnumber()">
+                <p><b>Email:</b></p>
+                <input class="form-control" type="text" id="Email" name="email" placeholder="Enter Email" onchange="validEmail()">
+                <p><b>Password:</b></p>
+                <input class="form-control" type="text" id="Password" name="password"  placeholder="Enter Password" onchange="validPassword()">
+                <p><b>Address:</b></p>
+                <input class="form-control" type="text" id="Address" name="address" placeholder="Enter Address" onchange="validAddress()">
+                <input class="btn btn-success col-md-12" type="submit" placeholder="Submit Form">
+                <input class="btn btn-danger col-md-12" type="reset" placeholder="Reset">
+                
+            </form>
+        </div>
+         <script> 
+        function validname()
+        {
+            var name = document.getElementById('name').value;
+            var namepat = /^[A-Za-z]{4-50}$/;
+            if(!namepat.test(name))
+        {
+            alert("Enter Valid Name")
+        }
+        }
+        function validage()
+        {
+            var age = document.getElementById('age').value;
+            var agepat = /^[1-9]{1}[0-9]{1}$/;
+            if(!agepat.test(age))
+        {
+            alert("Enter Valid age")
+        }
+        }
+        function validgender()
+        {
+            var gender = document.getElementById('gender').value;
+            var genderpat = /^[a-zA-Z]{}$/;
+            if(!genderpat.test(gender))
+        {
+            alert("Enter Valid gender")
+        }
+        }
+        function validcontactnumber()
+        {
+            var contactnumber = document.getElementById('contactnumber').value;
+            var contactnumberpat = /^[6-9]{1}[0-9]{9}$/;
+            if(!contactnumberpat.test(contactnumber))
+        {
+            alert("Enter Valid contactnumber")
+            
+        }
+        }
+        function validEmail()
+        {
+            var Email = document.getElementById('Email').value;
+            var Emailpat = /^[a-zA-Z]{6,50}@gmail\.com$/;
+            if(!Emailpat.test(Email))
+        {
+            alert("Enter Valid Email")
+        }
+        }
+        function validPassword()
+        {
+            var Password = document.getElementById('Password').value;
+            var Passwordpat = /^[a-zA-Z0-9@#_]{6,20}$/;
+            if(!passwordpat.test(password))
+        {
+            alert("Enter valid password")
+        }
+        }
+        function validAddress()
+        {
+            var Address = document.getElementById('Address').value;
+            var Addresspat = /^[a-zA-Z0-9\s,.-]{6-100}$/;
+            if(!Address.test(Address))
+        {
+            alert("Enter valid Address")
+        }
+        }
+        </script>
+    </div>
+    <div style="min-height: 100px;background-color: rgb(132, 174, 203); font-size: 25px; font-weight: bolder; text-align: center;"id="NAV">
+        All Rights Reserved 2025 Heart
+    </div>
+
+    </div>
+    
+</body>
+</html>

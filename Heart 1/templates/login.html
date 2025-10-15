@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LOGIN PAGE</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div style="min-height: 120px; background-color: rgb(114, 178, 203); font-size: 25px; font-weight: bolder;" id="NAV">
+        <div class="col-md-2" style="padding-top: 20px;">
+            Heart Disease Prediction
+        </div>
+    <div class="col-md-5">
+    </div>
+   
+    <div class="col-md-5" style="padding-top: 20px;">
+        <a href="/index">Home</a> |
+        <a href="/registration">Register</a> |
+        <a href="/login">Login</a>
+
+    </div>
+    </div>
+
+    <div class="col-md-6">
+     
+    <h1 style="text-align: center;">Login</h1>
+    <form style="padding-top: 30px;" action="/login" method="post">
+    
+        <label>USERNAME:</label>
+        <input type="text" id="uername" name="username" onchnage="validusername()"><br><br>
+
+        <label>PASSWORD:</label>
+        <input type="password" id="password" name="password" onchange="validpassword()"><br><br>
+
+        <button class="btn btn-success col-md-6">Submit</button>
+         <button class="btn btn-danger col-md-6">Reset</button>
+        </form>
+    
+    <script>
+        function validusername()
+        {
+            var user=document.getElementById("username").value;
+            var userpat=/^[A-Za-z]{4-50}$/;
+            if(!userpat.test(user))
+             {
+            alert("Enter valid username");
+        }
+        }
+        function validpass()
+        {
+            var pass = document.getElementById("password").value;
+            var passpat = /^[A-Za-z]{6-20}$/;
+            if(!passpat.test(pass))
+        {
+            alert("Enter valid password");
+        }
+        }
+        
+     
+        
+    </script>
+   </div>
+    
+    <div style="min-height: 800px;">
+    <img src="{{url_for('static',filename='003.jpg')}}"  class="col-md-6" style="padding-top: 20px;">
+    </div>
+     
+    
+    <div style="min-height: 100px;background-color: rgb(132, 174, 203); font-size: 25px; font-weight: bolder; text-align: center;"id="NAV">
+        All Rights Reserved 2025 Heart">
+    </div>
+     
+    
+            
+</body>
+</html>
